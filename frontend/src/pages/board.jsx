@@ -4,7 +4,10 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import io from 'socket.io-client';
 import { useNavigate } from 'react-router-dom';
 
-const socket = io('http://localhost:5000');
+const socket = io('https://todo-hxrx.onrender.com', {
+    transports: ["websocket"], 
+    withCredentials: true
+  });
 const columns = ['Todo', 'In Progress', 'Done'];
 
 export default function Board() {
