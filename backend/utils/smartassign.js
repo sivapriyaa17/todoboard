@@ -1,5 +1,5 @@
 const Task = require('../models/task');
-const User = require('../models/user');
+const User = require('../models/User');
 
 module.exports = async () => {
   const users = await User.find();
